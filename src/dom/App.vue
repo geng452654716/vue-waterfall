@@ -47,12 +47,8 @@
 </template>
 
 <script>
-// import waterfall from '../vue-waterfall/waterfall.vue'
-// import waterfallSilde from '../vue-waterfall/waterfall-silde.vue'
-// import { waterfall, waterfallSilde } from '../../lib/vue-waterfall.min'
-import aaa from '../../lib/vue-waterfall'
-// console.log(waterfall);
-console.log(aaa);
+// import { waterfall, waterfallSilde } from '../vue-waterfall/index'
+
 export default {
   components: {
     waterfall,
