@@ -74,8 +74,6 @@ const waterfallSilde = require("vue-waterfall-adaptive").waterfallSilde;
 | -------  | -----------------------------------------------------------            | ----------- | --------- |
 | prefetch | 是否需要预加载，在图片不定高时需要设置为 `true`，会预加载所有图片。 预加载时为了保证数据数据，会阻塞后续渲染   |     false     | Boolean|
 | imgs     | 需要预加载的图片数组，数组每一项为图片 url   |     [ ]     | string[ ] |
-
-
 ## 许可
 
 MIT@[geng452654716](https://github.com/geng452654716)

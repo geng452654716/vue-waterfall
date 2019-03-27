@@ -305,6 +305,8 @@ export default {
 
 <style lang="less" scoped>
 .dom {
+  width: 1200px;
+  margin: 0 auto;
   background-color: #efefef;
 }
 .waterfall {

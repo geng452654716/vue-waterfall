@@ -60,8 +60,8 @@ export default {
   methods: {
     // 通知父组件添加子实例
     notificationParent() {
-      this.parent.childrens.push(this)
       this.parent.allChildren.push(this)
+      this.parent.childrens.push(this)
     },
     // 刷新高度
     async getHeight(i) {

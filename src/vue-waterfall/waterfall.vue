@@ -21,7 +21,10 @@
         ></i>
       </span>
     </div>
-    <div class="finished" v-if="finished">{{ finishedTxt }}</div>
+    <div
+      class="finished"
+      v-if="finished"
+    >{{ finishedTxt }}</div>
   </div>
 </template>
 
@@ -78,7 +81,7 @@ export default {
     // 全部加载完成文本
     finishedTxt: {
       type: String,
-      default: "没有更多了~"
+      default: '没有更多了~'
     }
   },
   data() {
@@ -109,7 +112,7 @@ export default {
     // 获取初始 left 值
     getLeftValue() {
       this.left =
-        (document.body.clientWidth -
+        (this.$refs.waterfall.clientWidth -
           this.slideWidth * this.rowNumber -
           (this.rowNumber - 1) * this.leftInterval) /
         2
@@ -117,7 +120,7 @@ export default {
     // 获取瀑布流没列个数
     getRowNumber() {
       this.rowNumber = Math.floor(
-        innerWidth / (this.slideWidth + this.leftInterval)
+        this.$refs.waterfall.clientWidth / (this.slideWidth + this.leftInterval)
       )
     },
     // 获取silde宽度
