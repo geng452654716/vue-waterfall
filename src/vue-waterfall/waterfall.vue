@@ -1,7 +1,7 @@
 <template>
   <div
     class="waterfall"
-    :class="{resize, 'loading-show': loading && !mount}"
+    :class="{resize, 'loading-show': (loading && !mount) || finished}"
     :style="waterfallStyle"
     ref="waterfall"
   >
@@ -21,6 +21,7 @@
         ></i>
       </span>
     </div>
+    <div class="finished" v-if="finished">{{ finishedTxt }}</div>
   </div>
 </template>
 
@@ -57,7 +58,7 @@ export default {
     // 加载的颜色
     loadingColor: {
       type: String,
-      default: '#05c9d3'
+      default: '#969799'
     },
     // 是否需要菊花加载图
     loading: {
@@ -72,7 +73,12 @@ export default {
     // 是否处于加载状态，加载过程中不触发 load 事件
     finished: {
       type: Boolean,
-      defalut: false
+      default: false
+    },
+    // 全部加载完成文本
+    finishedTxt: {
+      type: String,
+      default: "没有更多了~"
     }
   },
   data() {
@@ -151,7 +157,6 @@ export default {
       this.childrens = []
       this.waterfallBoxHeight = [...this.initData].pop().top
       this.scrollMinHeight = [...this.initData].shift().top
-      // this.$emit('change', true)
       this.mount = true
     },
     // 更新布局
@@ -172,7 +177,7 @@ export default {
     // 滚动判断，加载更多
     handleScroll() {
       let waterfall = this.$refs.waterfall
-      if (!waterfall || !this.mount) return
+      if (!waterfall || !this.mount || this.finished) return
       let scrollTop = document.scrollingElement.scrollTop
       let waterfallButtom =
         waterfall.offsetTop + this.scrollMinHeight - this.offset - innerHeight
@@ -203,7 +208,6 @@ export default {
       if (!this.initData) {
         this._initWaterfall()
       }
-      // this.$emit('change', false)
       this.mount = false
       this.waterFall(val)
     },
@@ -239,7 +243,7 @@ export default {
   height: 30px;
   position: absolute;
   left: 50%;
-  bottom: 50px;
+  bottom: 30px;
   transform: translateX(-50%);
 }
 .loading {
@@ -266,6 +270,15 @@ export default {
       background-color: currentColor;
     }
   }
+}
+.finished {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: #969799;
+  line-height: 50px;
+  position: absolute;
+  bottom: 20px;
 }
 
 @keyframes loading-rotate {

@@ -32,7 +32,7 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 10240,
-            name: '[name].[contenthash:8].[ext]',
+            name: '[name].[ext]',
             outputPath: './img'
           }
         }

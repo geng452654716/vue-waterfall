@@ -1,10 +1,10 @@
 <template>
   <div class="dom">
     <waterfall
-      v-model="init"
       :width="330"
       :loading="true"
       @load="load"
+      :finished="finished"
     >
       <waterfall-silde
         v-for="(item, index) in waterfallData"
@@ -47,7 +47,7 @@
 </template>
 
 <script>
-// import { waterfall, waterfallSilde } from '../vue-waterfall/index'
+import { waterfall, waterfallSilde } from '../vue-waterfall/index'
 
 export default {
   components: {
@@ -64,511 +64,182 @@ export default {
       waterfallData: [
         {
           imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
+            require('./img/img1.jpg'),
+            require('./img/img2.jpg'),
+            require('./img/img3.jpg')
           ],
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈为什么不能当警犬？',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
+          avatar: require('./img/img4.jpg'),
+          name: '大哈',
+          describe: ['我是二哈我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img6.jpg'), require('./img/img7.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img5.jpg'),
+          name: '二哈',
+          describe: ['我拆家我骄傲']
         },
         {
-          imgs: [
-            'http://www.researchera.cn/Public/upload/2019-03-22/5c94acd6daa1b.gif'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img8.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img9.jpg'),
+          name: '三哈',
+          describe: ['什么都逃不过的我手掌']
         },
         {
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈是真傻还是假傻',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
+          avatar: require('./img/img10.jpg'),
+          name: '四哈',
+          describe: ['养只二哈欢乐多']
         },
         {
           imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
+            require('./img/img1.jpg'),
+            require('./img/img2.jpg'),
+            require('./img/img3.jpg')
           ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈为什么不能当警犬？',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
+          avatar: require('./img/img4.jpg'),
+          name: '大哈',
+          describe: ['我是二哈我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img6.jpg'), require('./img/img7.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img5.jpg'),
+          name: '二哈',
+          describe: ['我拆家我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img8.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img9.jpg'),
+          name: '三哈',
+          describe: ['什么都逃不过的我手掌']
         },
         {
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈是真傻还是假傻',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
+          avatar: require('./img/img10.jpg'),
+          name: '四哈',
+          describe: ['养只二哈欢乐多']
         },
         {
           imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
+            require('./img/img1.jpg'),
+            require('./img/img2.jpg'),
+            require('./img/img3.jpg')
           ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈为什么不能当警犬？',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
+          avatar: require('./img/img4.jpg'),
+          name: '大哈',
+          describe: ['我是二哈我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img6.jpg'), require('./img/img7.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img5.jpg'),
+          name: '二哈',
+          describe: ['我拆家我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img8.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img9.jpg'),
+          name: '三哈',
+          describe: ['什么都逃不过的我手掌']
         },
         {
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈是真傻还是假傻',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
+          avatar: require('./img/img10.jpg'),
+          name: '四哈',
+          describe: ['养只二哈欢乐多']
         },
         {
           imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
+            require('./img/img1.jpg'),
+            require('./img/img2.jpg'),
+            require('./img/img3.jpg')
           ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈为什么不能当警犬？',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
+          avatar: require('./img/img4.jpg'),
+          name: '大哈',
+          describe: ['我是二哈我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img6.jpg'), require('./img/img7.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img5.jpg'),
+          name: '二哈',
+          describe: ['我拆家我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img8.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img9.jpg'),
+          name: '三哈',
+          describe: ['什么都逃不过的我手掌']
         },
         {
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈是真傻还是假傻',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
+          avatar: require('./img/img10.jpg'),
+          name: '四哈',
+          describe: ['养只二哈欢乐多']
         },
         {
           imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
+            require('./img/img1.jpg'),
+            require('./img/img2.jpg'),
+            require('./img/img3.jpg')
           ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈为什么不能当警犬？',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
+          avatar: require('./img/img4.jpg'),
+          name: '大哈',
+          describe: ['我是二哈我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img6.jpg'), require('./img/img7.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img5.jpg'),
+          name: '二哈',
+          describe: ['我拆家我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img8.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img9.jpg'),
+          name: '三哈',
+          describe: ['什么都逃不过的我手掌']
         },
         {
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈是真傻还是假傻',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
+          avatar: require('./img/img10.jpg'),
+          name: '四哈',
+          describe: ['养只二哈欢乐多']
         }
       ],
-      // 瀑布流是否完成
-      init: false
+      // 页码
+      page: 1
     }
   },
   computed: {
@@ -585,78 +256,48 @@ export default {
   },
   methods: {
     load() {
-      this.waterfallData.push(
+      this.page ++
+      if (this.page > 10) {
+        this.finished = true;
+      }
+      let mock = [
         {
           imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
+            require('./img/img1.jpg'),
+            require('./img/img2.jpg'),
+            require('./img/img3.jpg')
           ],
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈为什么不能当警犬？',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
+          avatar: require('./img/img4.jpg'),
+          name: '大哈',
+          describe: ['我是二哈我骄傲']
         },
         {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'A同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img6.jpg'), require('./img/img7.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img5.jpg'),
+          name: '二哈',
+          describe: ['我拆家我骄傲']
         },
         {
-          imgs: [
-            'http://www.researchera.cn/Public/upload/2019-03-22/5c94acd6daa1b.gif'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'X同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+          imgs: [require('./img/img8.jpg')],
+          title: '二哈是真傻还是假傻',
+          avatar: require('./img/img9.jpg'),
+          name: '三哈',
+          describe: ['什么都逃不过的我手掌']
         },
         {
-          title: '参加【爱科研】量化科研项目的初衷？',
+          title: '二哈是真傻还是假傻',
           said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'Y同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'B同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
-        },
-        {
-          imgs: [
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/2290.20180614104655.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/8383.20180614104624.jpg',
-            '//softlinkceshi.oss-cn-beijing.aliyuncs.com/pcimg/6912.20180614104519.jpg'
-          ],
-          title: '参加【爱科研】量化科研项目的初衷？',
-          said:
-            '身为一个数学专业的学生，之前并没有对金融方向有过多的了解，对量化方面也不太熟悉。考虑到研究生方向想走金融，就怀着学习的态度参加了此次科研训练。同时也为以后研究生走金融方向提前了解一些学科知识，并且研究一些学科相关增长自己的能力和见识。',
-          avatar:
-            '//www.researchera.cn/Public/upload/2019-03-25/5c984b59d56ac.jpg',
-          name: 'L同学',
-          describe: ['科研项目：量化科研—多因子选股研究策略', '专业：数学专业']
+            '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
+          avatar: require('./img/img10.jpg'),
+          name: '四哈',
+          describe: ['养只二哈欢乐多']
         }
-      )
+      ]
+      this.waterfallData.push(...mock.sort((a, b) => Math.random() - 0.5))
     }
   }
 }

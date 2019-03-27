@@ -4,11 +4,13 @@
   "description": "基于 vue.js 的瀑布流组件，自适应高度，响应式",
   "main": "lib/vue-waterfall.js",
   "files": [
-    "lib"
+    "lib",
+    "src/vue-waterfall"
   ],
   "scripts": {
     "serve": "webpack-dev-server --config ./build/webpack.dev.js",
-    "build": "webpack --config ./build/webpack.prod.js"
+    "build": "webpack --config ./build/webpack.prod.js",
+    "build:dev": "webpack --config ./build/webpack.dev.js"
   },
   "repository": {
     "type": "git",
