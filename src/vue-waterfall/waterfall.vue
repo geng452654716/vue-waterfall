@@ -151,7 +151,7 @@ export default {
       children.forEach((item, index) => {
         item.top = this.initData[0].top
         item.left = this.initData[0].left
-        this.initData[0].top += item.height + 20
+        this.initData[0].top += item.height + this.topInterval
         item.init = true
         this.initData.sort((a, b) => {
           return a.top - b.top

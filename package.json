@@ -1,6 +1,6 @@
 {
   "name": "vue-waterfall-adaptive",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "基于 vue.js 的瀑布流组件，自适应高度，响应式",
   "main": "lib/vue-waterfall.js",
   "files": [
@@ -10,7 +10,8 @@
   "scripts": {
     "serve": "webpack-dev-server --config ./build/webpack.dev.js",
     "build": "webpack --config ./build/webpack.prod.js",
-    "build:dev": "webpack --config ./build/webpack.dev.js"
+    "build:dev": "webpack --config ./build/webpack.dev.js",
+    "lint": "eslint --fix ./src"
   },
   "repository": {
     "type": "git",
@@ -33,9 +34,13 @@
     "@babel/plugin-transform-runtime": "^7.4.0",
     "@babel/runtime": "^7.4.2",
     "@babel/runtime-corejs2": "^7.4.2",
+    "@vue/eslint-plugin": "^4.2.0",
+    "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
     "file-loader": "^3.0.1",
     "html-webpack-plugin": "^3.2.0",
     "less": "^3.9.0",
@@ -50,6 +55,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "@vue/eslint-config-standard": "^4.0.0",
     "lodash": "^4.17.11",
     "vue": "^2.6.10"
   }
