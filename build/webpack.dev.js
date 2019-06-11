@@ -1,6 +1,6 @@
-const path = require('path');
-const webpack = require('webpack');
-const merge = require('webpack-merge');
+const path = require('path')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
 const webpackBaseConfig = require('./webpack.base')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = merge(webpackBaseConfig, {
@@ -16,7 +16,10 @@ module.exports = merge(webpackBaseConfig, {
     port: 9999,
     host: '0.0.0.0'
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), new HtmlWebpackPlugin({
-    template: 'src/dom/index.html'
-  })]
-});
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/dom/index.html'
+    })
+  ]
+})

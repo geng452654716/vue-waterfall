@@ -1,6 +1,6 @@
-const path = require('path');
-const merge = require('webpack-merge');
-const webpackBaseConfig = require('./webpack.base');
+const path = require('path')
+const merge = require('webpack-merge')
+const webpackBaseConfig = require('./webpack.base')
 module.exports = merge(webpackBaseConfig, {
   mode: 'production',
   entry: {
@@ -14,4 +14,4 @@ module.exports = merge(webpackBaseConfig, {
     libraryTarget: 'umd',
     umdNamedDefine: true
   }
-});
+})
