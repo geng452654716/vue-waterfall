@@ -4,13 +4,13 @@ const webpackBaseConfig = require('./webpack.base')
 module.exports = merge(webpackBaseConfig, {
   mode: 'production',
   entry: {
-    'vue-waterfall': './src/vue-waterfall/index.js'
+    'vue-waterfall-adaptive': './src/vue-waterfall/index.js'
   },
   output: {
     path: path.resolve(__dirname, '../lib'),
     publicPath: '/',
     filename: '[name].js',
-    library: 'VueWaterfall',
+    library: 'vueWaterfallAdaptive',
     libraryTarget: 'umd',
     umdNamedDefine: true
   }

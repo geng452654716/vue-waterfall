@@ -90,6 +90,10 @@ export default {
   },
   mounted() {
     this.notificationParent()
+  },
+  destroyed () {
+    let index = this.parent.allChildren.indexOf(this)
+    this.parent.allChildren.splice(index, 1)
   }
 }
 </script>

@@ -29,7 +29,7 @@ import { waterfall, waterfallSilde } from 'vue-waterfall-adaptive';
 const waterfall = require("vue-waterfall-adaptive").waterfall;
 const waterfallSilde = require("vue-waterfall-adaptive").waterfallSilde;
 ```
-也可以在 html 文件中使用 `script` 标签引入脚本，访问全局变量 `VueWaterfall`
+也可以在 html 文件中使用 `script` 标签引入脚本，访问全局变量 `vueWaterfallAdaptive`
 
 ```js
 <script src="lib/vue-waterfall-adaptive.js"></script>
@@ -64,9 +64,15 @@ const waterfallSilde = require("vue-waterfall-adaptive").waterfallSilde;
 
 ### waterfall 事件
 
-| 事件名   | 说明                                                       | 参数         |
-| ------- | -----------------------------------------------------------| ----------- |
-| load    | 滚动条与底部距离小于 `offset` 时触发                          |     150     |
+| 事件名   | 说明                                                       |
+| ------- | -----------------------------------------------------------|
+| load    | 滚动条与底部距离小于 `offset` 时触发                          | 
+
+### waterfall 方法
+
+| 方法名   | 说明                                                       | 
+| ------- | -----------------------------------------------------------| 
+| reset   | 重置瀑布流布局(此方法只重置组件内部高度于位置,外部状态需自己重置,如 finished 属性,页码,数据等)|
 
 ### waterfallSilde 属性
 

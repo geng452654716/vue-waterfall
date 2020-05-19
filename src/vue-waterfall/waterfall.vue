@@ -73,7 +73,7 @@ export default {
       type: Number,
       default: 200
     },
-    // 是否处于加载状态，加载过程中不触发 load 事件
+    // 是否全部加载完成,不在书法 load 事件
     finished: {
       type: Boolean,
       default: false
@@ -145,6 +145,7 @@ export default {
     },
     // 计算瀑布流dom位置
     async waterFall(children) {
+      if (!children.length) return
       for (let i = 0; i < children.length; i++) {
         await children[i].getHeight(i)
       }
@@ -188,6 +189,20 @@ export default {
         this.$emit('load')
         this.mount = false
       }
+    },
+    // 重置数据
+    reset() {
+      this.initData = null
+      this.waterfallBoxHeight = 0
+      this.scrollMinHeight = 0
+      this.rowNumber = 0
+      this.slideWidth = 0
+      this.resize = false
+      this.left = 0
+      this.mount = false
+      this.$nextTick(() => {
+        this._refreshWaterfall()
+      })
     }
   },
   computed: {
