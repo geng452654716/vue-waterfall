@@ -6,7 +6,6 @@ import Details from './Details.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  mode: 'history',
   routes: [
     {
       path: '/',

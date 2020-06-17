@@ -74,7 +74,6 @@ export default {
   },
   methods: {
     load() {
-      console.log(111)
       this.page++
       if (this.page > 10) {
         this.finished = true
