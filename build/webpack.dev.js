@@ -14,7 +14,8 @@ module.exports = merge(webpackBaseConfig, {
     hot: true,
     useLocalIp: true,
     port: 9999,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    historyApiFallback: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

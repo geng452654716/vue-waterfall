@@ -1,30 +1,17 @@
 <template>
   <div
     class="waterfall"
-    :class="{resize, 'loading-show': (loading && !mount) || finished}"
+    :class="{ resize, 'loading-show': (loading && !mount) || finished }"
     :style="waterfallStyle"
     ref="waterfall"
   >
     <slot></slot>
-    <div
-      class="loading-warp"
-      v-show="!mount"
-      v-if="loading"
-    >
-      <span
-        class="loading"
-        :style="{color: this.loadingColor}"
-      >
-        <i
-          v-for="(item, index) in 12"
-          :key="index"
-        ></i>
+    <div class="loading-warp" v-show="!mount" v-if="loading">
+      <span class="loading" :style="{ color: this.loadingColor }">
+        <i v-for="(item, index) in 12" :key="index"></i>
       </span>
     </div>
-    <div
-      class="finished"
-      v-if="finished"
-    >{{ finishedTxt }}</div>
+    <div class="finished" v-if="finished">{{ finishedTxt }}</div>
   </div>
 </template>
 
@@ -73,7 +60,7 @@ export default {
       type: Number,
       default: 200
     },
-    // 是否全部加载完成,不在书法 load 事件
+    // 是否全部加载完成,不在触发 load 事件
     finished: {
       type: Boolean,
       default: false
@@ -149,7 +136,7 @@ export default {
       for (let i = 0; i < children.length; i++) {
         await children[i].getHeight(i)
       }
-      children.forEach((item, index) => {
+      children.forEach(item => {
         item.top = this.initData[0].top
         item.left = this.initData[0].left
         this.initData[0].top += item.height + this.topInterval
@@ -233,8 +220,19 @@ export default {
     finished(val) {
       if (val) {
         window.removeEventListener('scroll', this.scrollBindFn)
+      } else {
+        window.addEventListener('scroll', this.scrollBindFn)
       }
     }
+  },
+  activated() {
+    window.addEventListener('resize', this.resizeBindFn)
+    window.addEventListener('scroll', this.scrollBindFn)
+    this._refreshWaterfall()
+  },
+  deactivated() {
+    window.removeEventListener('resize', this.resizeBindFn)
+    window.removeEventListener('scroll', this.scrollBindFn)
   },
   mounted() {
     window.addEventListener('resize', this.resizeBindFn)

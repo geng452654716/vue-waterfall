@@ -1,5 +1,6 @@
 module.exports = {
   plugins: [
+    'lodash',
     [
       '@babel/plugin-transform-runtime',
       {
@@ -10,4 +11,4 @@ module.exports = {
       }
     ]
   ]
-};
+}

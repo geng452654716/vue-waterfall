@@ -1,19 +1,22 @@
 module.exports = {
+  root: true,
   env: {
-    browser: true,
-    es6: true
-  },
-  extends: ['plugin:vue/essential', '@vue/standard'],
-  globals: {
-    API_CONFIG: true,
-    'process.env.NODE_ENV': true,
-    NODE_ENV: true
+    node: true
   },
   parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
     parser: 'babel-eslint'
   },
-  plugins: ['@vue'],
-  rules: {}
+  extends: ['plugin:vue/essential', 'eslint:recommended', '@vue/prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    //强制使用单引号
+    quotes: ['error', 'single'],
+    //强制不使用分号结尾
+    semi: ['error', 'never']
+  },
+  globals: {
+    noCaptcha: 'readonly'
+  }
 }

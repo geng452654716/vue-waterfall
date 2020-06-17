@@ -1,5 +1,6 @@
 const vueLoaderPlugin = require('vue-loader/lib/plugin')
 const cleanWebpackPlugin = require('clean-webpack-plugin')
+const lodashWebpackPlugin = require('lodash-webpack-plugin')
 module.exports = {
   module: {
     rules: [
@@ -41,6 +42,7 @@ module.exports = {
   },
   plugins: [
     new vueLoaderPlugin(),
-    new cleanWebpackPlugin()
+    new cleanWebpackPlugin(),
+    new lodashWebpackPlugin()
   ]
 }
