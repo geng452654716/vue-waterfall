@@ -3,7 +3,7 @@
     class="waterfall-silde"
     :style="_style"
     ref="waterfallSilde"
-    :class="{show: init}"
+    :class="{ show: init }"
   >
     <slot></slot>
   </div>
@@ -64,15 +64,27 @@ export default {
       this.parent.childrens.push(this)
     },
     // 刷新高度
-    async getHeight(i) {
-      await this.imgLoad()
-      this.height = this.$refs.waterfallSilde.offsetHeight
+    async getHeight() {
+      try {
+        await this.imgLoad()
+        this.height = this.$refs.waterfallSilde.offsetHeight
+      } catch (error) {
+        console.error(error)
+      }
     },
     // 图片不定高的时候预加载
-    async imgLoad(img) {
-      if (!this.prefetch) return 'imgLoadJump';
-      if (!this.imgs.length) return 'imgLoadJump'
-      return await Promise.all(this.imgs.map(item => this.everyImgLoad(item)))
+    async imgLoad() {
+      try {
+        if (!this.prefetch) return Promise.resolve('跳过加载')
+        if (!this.imgs.length) return Promise.resolve('跳过加载')
+        return await Promise.all(
+          this.imgs.map(item => {
+            return this.everyImgLoad(item)
+          })
+        )
+      } catch (error) {
+        console.error(error)
+      }
     },
     // 单张图片预加载
     everyImgLoad(imgSrc) {
@@ -80,10 +92,18 @@ export default {
         let img = new Image()
         img.src = imgSrc
         img.onload = () => {
-          resolve('imgLoadFinish')
+          img = null
+          resolve({
+            src: imgSrc,
+            status: '图片加载成功'
+          })
         }
         img.onerror = () => {
-          resolve('imgLoadError')
+          img = null
+          reject({
+            src: imgSrc,
+            status: '图片加载失败'
+          })
         }
       })
     }
@@ -91,7 +111,7 @@ export default {
   mounted() {
     this.notificationParent()
   },
-  destroyed () {
+  destroyed() {
     let index = this.parent.allChildren.indexOf(this)
     this.parent.allChildren.splice(index, 1)
   }

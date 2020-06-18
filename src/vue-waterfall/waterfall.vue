@@ -1,23 +1,28 @@
 <template>
   <div
     class="waterfall"
-    :class="{ resize, 'loading-show': (loading && !mount) || finished }"
+    :class="{
+      resize,
+      'waterfall-loading-show': (loading && !mount) || (finished && finishedTxt)
+    }"
     :style="waterfallStyle"
     ref="waterfall"
   >
     <slot></slot>
-    <div class="loading-warp" v-show="!mount" v-if="loading">
-      <span class="loading" :style="{ color: this.loadingColor }">
+    <div class="waterfall-loading-warp" v-show="!mount" v-if="loading">
+      <slot name="loading" v-if="$slots.loading"></slot>
+      <span class="waterfall-loading" :style="{ color: loadingColor }" v-else>
         <i v-for="(item, index) in 12" :key="index"></i>
       </span>
     </div>
-    <div class="finished" v-if="finished">{{ finishedTxt }}</div>
+    <div class="finished" v-if="finished && finishedTxt">{{ finishedTxt }}</div>
   </div>
 </template>
 
 <script>
 import debounce from 'lodash/debounce'
 import throttle from 'lodash/throttle'
+let defaultInnerWidth = 0
 export default {
   name: 'waterfall',
   provide() {
@@ -43,7 +48,8 @@ export default {
     },
     // 瀑布流宽度
     width: {
-      type: Number
+      type: Number,
+      default: 320
     },
     // 加载的颜色
     loadingColor: {
@@ -134,6 +140,7 @@ export default {
     async waterFall(children) {
       if (!children.length) return
       for (let i = 0; i < children.length; i++) {
+        if (children[i].height) continue
         await children[i].getHeight(i)
       }
       children.forEach(item => {
@@ -152,11 +159,11 @@ export default {
     },
     // 更新布局
     _refreshWaterfall() {
-      this.getSildeWidth()
-      this.getRowNumber()
-      this.getLeftValue()
-      this.getInitData()
-      this.waterFall(this.allChildren)
+      if (innerWidth !== defaultInnerWidth) {
+        this.getRowNumber()
+        this.getInitData()
+        this.waterFall(this.allChildren)
+      }
     },
     // 初始化
     _initWaterfall() {
@@ -195,7 +202,7 @@ export default {
   computed: {
     // 视口变化
     resizeBindFn() {
-      return debounce(this._refreshWaterfall, 100)
+      return debounce(this._refreshWaterfall, 200)
     },
     // 滚动
     scrollBindFn() {
@@ -235,6 +242,7 @@ export default {
     window.removeEventListener('scroll', this.scrollBindFn)
   },
   mounted() {
+    defaultInnerWidth = innerWidth
     window.addEventListener('resize', this.resizeBindFn)
     window.addEventListener('scroll', this.scrollBindFn)
   },
@@ -251,20 +259,18 @@ export default {
   width: 100%;
   overflow: hidden;
 }
-.loading-show {
+.waterfall-loading-show {
   padding-bottom: 100px;
 }
-.loading-warp {
-  width: 30px;
-  height: 30px;
+.waterfall-loading-warp {
   position: absolute;
   left: 50%;
   bottom: 30px;
   transform: translateX(-50%);
 }
-.loading {
-  width: 100%;
-  height: 100%;
+.waterfall-loading {
+  width: 30px;
+  height: 30px;
   box-sizing: border-box;
   animation: loading-rotate 0.8s linear infinite;
   animation-timing-function: steps(12);
@@ -306,7 +312,7 @@ export default {
   }
 }
 .generate-spinner(@n, @i: 1) when (@i =< @n) {
-  .loading i:nth-of-type(@{i}) {
+  .waterfall-loading i:nth-of-type(@{i}) {
     opacity: 1 - (0.75 / 12) * (@i - 1);
     transform: rotate(@i * 30deg);
   }

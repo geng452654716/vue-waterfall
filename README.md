@@ -55,12 +55,12 @@ const waterfallSilde = require("vue-waterfall-adaptive").waterfallSilde;
 | top             | 初始 `top` 值                                                  | 0           | Number    |           -              |
 | top-interval    | 瀑布流布局上下间距                                              | 0           | Number    |           -              |
 | left-interval   | 瀑布流布局左右间距                                              | 0           | Number    |            -             |
-| width           | 宽度                                                           | 0           | Number    |              -           |
+| width           | 宽度,组件会根据宽度自动分配每行个数                                | 320           | Number    |              -           |
 | loading         | 是否显示加载中的菊花图                                          | false       | Boolean   |           -              |
 | loading-color   | 菊花图的颜色                                                   | #969799     | String   |           -              |
 | offset          | 滚动条距离底部小于 `offset` 时触发 `load` 事件                   | 200         | Number    |           -              |
 | finished        | 是否已加载完成，加载完成后不再触发 `load` 事件                    | false       | Boolean   |           -              |
-| finished-txt    | 加载完成后的提示文案                                            | 没有更多了~  | String   |           -              |
+| finished-txt    | 加载完成后的提示文案,如不需要,设置空字符串                         | 没有更多了~  | String   |           -              |
 
 ### waterfall 事件
 
@@ -74,11 +74,18 @@ const waterfallSilde = require("vue-waterfall-adaptive").waterfallSilde;
 | ------- | -----------------------------------------------------------| 
 | reset   | 重置瀑布流布局(此方法只重置组件内部高度于位置,外部状态需自己重置,如 finished 属性,页码,数据等)|
 
+### waterfall 插槽
+
+| 方法名   | 说明                                                       | 
+| ------- | -----------------------------------------------------------| 
+| default   | 默认插槽,插入 waterfallSilde 组件                           |
+| loading   | 自定义 loading 效果                           |
+
 ### waterfallSilde 属性
 
 | 属性     | 描述                                                                   |  默认值       | 类型      |
 | -------  | -----------------------------------------------------------            | ----------- | --------- |
-| prefetch | 是否需要预加载，在图片不定高时需要设置为 `true`，会预加载所有图片。 预加载时为了保证数据数据，会阻塞后续渲染   |     false     | Boolean|
+| prefetch | 是否需要预加载，在图片不定高时需要设置为 `true`，会预加载所有图片。 预加载时为了保证数据，会阻塞后续渲染   |     false     | Boolean|
 | imgs     | 需要预加载的图片数组，数组每一项为图片 url   |     [ ]     | string[ ] |
 ## 许可
 
