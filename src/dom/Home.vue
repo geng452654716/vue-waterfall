@@ -87,7 +87,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -97,7 +98,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -106,7 +108,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -114,7 +117,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         },
@@ -127,7 +131,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -137,7 +142,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -146,7 +152,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -154,7 +161,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         },
@@ -167,7 +175,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -177,7 +186,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -186,7 +196,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -194,7 +205,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         },
@@ -207,7 +219,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -217,7 +230,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -226,7 +240,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -234,7 +249,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         },
@@ -247,7 +263,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -257,7 +274,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -266,7 +284,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -274,7 +293,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         }
@@ -300,7 +320,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -310,7 +331,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -319,7 +341,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -327,7 +350,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         },
@@ -340,7 +364,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -350,7 +375,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -359,7 +385,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -367,7 +394,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         },
@@ -380,7 +408,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -390,7 +419,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -399,7 +429,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -407,7 +438,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         },
@@ -420,7 +452,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -430,7 +463,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -439,7 +473,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -447,7 +482,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         },
@@ -460,7 +496,8 @@ export default {
           title: '二哈为什么不能当警犬？',
           said:
             '二哈不能当警犬的最大的原因是也许在执行任务中与犯罪分子达成共识！',
-          avatar: require('./img/img4.jpg'),
+          avatar:
+            'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1052131196,1689306403&fm=26&gp=0.jpg',
           name: '大哈',
           describe: ['我是二哈我骄傲']
         },
@@ -470,7 +507,8 @@ export default {
             'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img5.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2124915863,554082401&fm=26&gp=0.jpg',
           name: '二哈',
           describe: ['我拆家我骄傲']
         },
@@ -479,7 +517,8 @@ export default {
             'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg'
           ],
           title: '二哈是真傻还是假傻',
-          avatar: require('./img/img9.jpg'),
+          avatar:
+            'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1063873711,3809085003&fm=26&gp=0.jpg',
           name: '三哈',
           describe: ['什么都逃不过的我手掌']
         },
@@ -487,7 +526,8 @@ export default {
           title: '二哈是真傻还是假傻',
           said:
             '二哈的拆家出了名的，被称为拆迁队队长，精力旺盛，它总是要玩、要跑、要跳，一哈顶三虎，三哈沉航母，五哈斗上帝，十哈创世纪，百花毁灭银河系，千哈称霸宇宙第一，所以一般能养哈士奇的人都是非富则贵！',
-          avatar: require('./img/img10.jpg'),
+          avatar:
+            'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703126199,2378852978&fm=26&gp=0.jpg',
           name: '四哈',
           describe: ['养只二哈欢乐多']
         }
